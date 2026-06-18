@@ -1,0 +1,205 @@
+.watch-shop {
+  width: 100%;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.watch-shop-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+.watch-shop-view-all {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-white);
+  background: var(--color-black);
+  border: 1px solid var(--color-black);
+  transition: background 0.2s, color 0.2s;
+}
+
+.watch-shop-view-all:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.watch-shop-title {
+  margin: 0 0 1.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-black);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.watch-shop-carousel {
+  position: relative;
+}
+
+.watch-shop-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 0.25rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.watch-shop-track::-webkit-scrollbar {
+  display: none;
+}
+
+.reel-card {
+  flex: 0 0 calc(25% - 0.75rem);
+  min-width: 200px;
+  scroll-snap-align: start;
+}
+
+.reel-card-media-link {
+  display: block;
+  text-decoration: none;
+}
+
+.reel-card-media {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-surface);
+  aspect-ratio: 4 / 5;
+}
+
+.reel-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-card-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #f0f0f0 0%, #e4e4e4 100%);
+}
+
+.reel-card-product-thumb {
+  position: absolute;
+  bottom: 0.65rem;
+  left: 0.65rem;
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border: 2px solid var(--color-white);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.reel-card-info {
+  padding: 0.75rem 0.15rem 0;
+}
+
+.reel-card-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-black);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reel-card-title:hover {
+  color: var(--color-text-muted);
+}
+
+.reel-card-price {
+  margin: 0.35rem 0 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.watch-shop-nav {
+  position: absolute;
+  top: 38%;
+  right: -0.25rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-black);
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, border-color 0.2s;
+  z-index: 2;
+}
+
+.watch-shop-nav:hover {
+  background: var(--color-surface);
+  border-color: var(--color-black);
+}
+
+.reel-card--loading .reel-card-info {
+  padding-top: 0.75rem;
+}
+
+.reel-skeleton-line {
+  height: 12px;
+  border-radius: 2px;
+  background: var(--color-surface);
+}
+
+.reel-skeleton-line--title {
+  width: 85%;
+  margin-bottom: 0.5rem;
+}
+
+.reel-skeleton-line--price {
+  width: 45%;
+}
+
+@media (max-width: 1100px) {
+  .reel-card {
+    flex: 0 0 calc(33.333% - 0.7rem);
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .watch-shop-inner {
+    padding: 2rem 1.25rem 2.5rem;
+  }
+
+  .reel-card {
+    flex: 0 0 calc(50% - 0.5rem);
+    min-width: 160px;
+  }
+
+  .watch-shop-nav {
+    right: 0;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reel-card {
+    flex: 0 0 78%;
+    min-width: 0;
+  }
+}
